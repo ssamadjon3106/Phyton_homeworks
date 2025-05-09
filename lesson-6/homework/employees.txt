@@ -1,1 +1,5 @@
-1, Samadjon, Software engineer, 10000
+777,Ulug'bek,IT,15000
+1131,dasdas,acac,1213
+777,Ulug'bek,IT,15000
+777,Ulug'bek,It,15000
+777,sss,sasa,123

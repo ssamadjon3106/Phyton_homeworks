@@ -2,7 +2,7 @@ import os
 import sys
 import json
 
-# Placeholder for storage object
+
 class JSONStorage:
     def __init__(self, filename):
         self.filename = filename

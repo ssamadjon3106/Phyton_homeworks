@@ -20,7 +20,7 @@ class Employee:
         parts = line.strip().split(',')
         if len(parts) == 4:
             return Employee(parts[0], parts[1], parts[2], parts[3])
-        return None
+        return 
     
 
 
@@ -36,18 +36,19 @@ class EmployeeManager:
             salary=input("Enter a salary")
             emp=Employee(emp_id, name, position, salary)
 
-            with open(File, mode='a') as file:
-                file.write(emp.to_file_format)
+            with open(EmployeeManager.File, mode='a') as file:
+                file.write(emp.to_file_format())
             
             print("Employee added!") 
 
+
     @staticmethod
     def view_all():
-        if not os.path.exists(EmployeeManager.File_PATH):
+        if not os.path.exists(EmployeeManager.File):
             print("Employee not found")
             return
         
-        with open(File, mode= 'r') as file:
+        with open(EmployeeManager.File, mode= 'r') as file:
             print('\n ALL Employees: ')
             for line in file:
                 emp=Employee.from_file_format(line)
@@ -57,9 +58,9 @@ class EmployeeManager:
     
     @staticmethod            
     def search_emp(emp_id):
-        with open(File, mode='r') as file:
+        with open(EmployeeManager.File, mode='r') as file:
             for line in file:
-                emp=Employee.from_file_format
+                emp=Employee.from_file_format(line)
                 if emp and emp.emp_id==emp_id:
                     print(emp)
                 else:
@@ -68,7 +69,7 @@ class EmployeeManager:
     def update(emp_id):
         updated=False
         updated_lines=[]
-        with open(EmployeeManager.File_PATH, mode='r') as file:
+        with open(EmployeeManager.File, mode='r') as file:
             for line in file:
                 emp=Employee.from_file_format(line)
                 if emp and emp.emp_id==emp_id:
@@ -81,7 +82,7 @@ class EmployeeManager:
                 else:
                     updated_lines.append(line)    
 
-        with open(EmployeeManager.File_PATH, mode='w') as file:
+        with open(EmployeeManager.File, mode='w') as file:
             file.writelines(updated_lines)
             print("Successfully updated")
 
@@ -90,16 +91,16 @@ class EmployeeManager:
     def delete_employee(emp_id):
         deleted=False
         remainig_lines=[]
-        with open(EmployeeManager.File_PATH, mode='r') as file:
+        with open(EmployeeManager.File, mode='r') as file:
             for line in file :
-                emp=EmployeeManager.from_file_format(line)
+                emp=Employee.from_file_format(line)
                 if emp and emp.emp_id== emp_id:
                     deleted=True
                     continue
                 else:
                     remainig_lines.append(line)    
 
-        with open(EmployeeManager.File_PATH, mode='w') as file:
+        with open(EmployeeManager.File, mode='w') as file:
             file.writelines(remainig_lines)
             print('Deleleted successfully') if deleted else "Employee not found"
     @staticmethod
