@@ -1,0 +1,10 @@
+{
+    "name": "Samadjon",
+    "age": 22,
+    "email": "samadjon@example.com",
+    "hobbies": [
+        "reading",
+        "coding",
+        "traveling"
+    ]
+}

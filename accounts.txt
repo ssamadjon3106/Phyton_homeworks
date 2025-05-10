@@ -1,7 +1,0 @@
-{
-    "e3438bfc-d027-4c46-ba40-f879e74a387f": {
-        "account_number": "e3438bfc-d027-4c46-ba40-f879e74a387f",
-        "name": "Samadjon",
-        "balance": 1.0
-    }
-}
