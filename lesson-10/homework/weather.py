@@ -6,4 +6,14 @@ url = f'https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={api_
 
 response = requests.get(url)
 data = response.json()
-print(data)
+if response.status_code==200:
+    weather={
+        'Temperature (C) ': data['main']['temp'],
+        'Humidity' : data['main']['humidity'],
+        'Wind speed' :data['wind']['speed']
+
+    }
+    for key , val in weather.items():
+        print(f'{key} : {val}')
+else:
+    print("City not found")       
