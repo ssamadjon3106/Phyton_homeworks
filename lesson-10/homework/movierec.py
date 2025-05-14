@@ -6,7 +6,7 @@ headers = {
     "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMDU3YWEwNTk1YjcwYTZmOWI2ZTk2N2Q5OGUxMmVkNiIsIm5iZiI6MTc0Njk2MTY1OC41OTMsInN1YiI6IjY4MjA4NGZhNTBiYjhmZTBiMDg2M2M5NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tDq7xgLda0ENSRR6ThTHOWmWLSzuLLnvyUw72Zc89aU"
 }
 
-# Step 1: Get available genres
+
 genres_url = "https://api.themoviedb.org/3/genre/movie/list"
 response = requests.get(genres_url, headers=headers)
 genres = response.json().get("genres", {})
