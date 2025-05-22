@@ -28,7 +28,7 @@ def calculate_average_grades():
         writer = csv.writer(file)
         writer.writerow(['Subject', 'Average Grade'])
         for subject, average in averages.items():
-            writer.writerows([subject, average])
+            writer.writerow([subject, average])
 
     print("Averages written to", output_path)
 

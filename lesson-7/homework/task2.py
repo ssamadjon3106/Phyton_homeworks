@@ -66,7 +66,7 @@ class EmployeeManager:
                 else:
                     print("Employee not found")
     @staticmethod    
-    def update(emp_id):
+    def update(self, emp_id):
         updated=False
         updated_lines=[]
         with open(EmployeeManager.File, mode='r') as file:
@@ -74,9 +74,9 @@ class EmployeeManager:
                 emp=Employee.from_file_format(line)
                 if emp and emp.emp_id==emp_id:
                     print("employee found.Enter new details: ")
-                    name=input("Enter a name:")
-                    position=input("Enter a position")
-                    salary=input("Enter salary")
+                    self.name=input("Enter a name:")
+                    self.position=input("Enter a position")
+                    self.salary=input("Enter salary")
                     updated_lines.append(emp.to_file_format())
                     updated=True
                 else:

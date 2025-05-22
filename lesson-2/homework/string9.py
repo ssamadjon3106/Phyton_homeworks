@@ -1,3 +1,3 @@
-b=(input())
-reversed_string= b[::1]
-print(reversed_string)
+b=input()
+reversed_order=b[::1]
+print(reversed_order)

@@ -1,0 +1,12 @@
+{
+    "d920c960-de34-466d-aaba-bb2a273b7784": {
+        "account_number": "d920c960-de34-466d-aaba-bb2a273b7784",
+        "name": "Samadjon",
+        "balance": 211.0
+    },
+    "48f5a98b-db48-4232-88cd-ce8e73af648b": {
+        "account_number": "48f5a98b-db48-4232-88cd-ce8e73af648b",
+        "name": "sss",
+        "balance": 0.0
+    }
+}
